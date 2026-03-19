@@ -1,0 +1,57 @@
+git clone git@gitlab.com:AnitaCloudTech/my-project.git
+
+//bash komande korisecene:
+ls -a
+ls -l
+ls ./git
+
+vim README.md (koriscen vim editor)
+
+git status //promene u lokalnom git repozitorijumu
+
+git add . //staging area
+
+:wq  //izlaz iz vim editora
+
+git log //promene u lokalnom repozitorijumu
+
+git push //sve lokalne promene,postaju i remote promene
+
+git init//create local git repository
+
+git remote add origin git@gitlab.com:AnitaCloudTech/my-project.git
+
+git push --set-upstream(-u) origin master //spaja origin sa master branch
+
+rm -rf .git //brise GitHub repozitorijum 
+
+git pull // povlaci sve remote promene git repozitorijuma
+
+git checkout bugfix/user-auth-error // promena grane
+
+git checkout -b feature/database-connection //pravi novu granu lokalno i menja je u napravljenu granu
+
+git push --set-upstream(-u) origin feature/database-connection
+
+//develop branch for testing and at the end merge with master branch when it's all okey with code and bugs doesn't exist
+
+//reviewing code in team before merge requests
+
+git branch -d feature/database-connection //obrisi granu
+
+git pull --rebase //linijski poravnava kod kad se vrsi merge
+
+git branch -a  //izlistavanje svih grana
+
+git rm -r cached .idea //ukoliko smo postavili nesto sto ne treba na GitHub(lozinke,api keys...)ova komnda brise sve to sa githuba ali lokalno za nas racunar ne
+
+git stash //pauza u radu
+git stash pop //vratiti prethodne promene i nastaviti gde si stao
+
+HEAD=>pointed to the last commit
+
+git reset --hard HEAD~2 //brise poslednja 2 commit-a
+
+git commit -amend // menja poslednji commit
+
+git merge master // povlaci promene sa master grane na trenutnu granu u kojoj se nalazimo
